@@ -1,0 +1,62 @@
+rounds = 20;
+
+% The size if the test graph
+size = 100;
+
+% The range of the edge rate
+weight_range = 10;  % update with edge_compatibility/node_compatibility
+% How often two nodes are connected
+connected_rate = 0.7;
+% How many noise are there
+noise_rate = 0.05;
+
+% Node Attribute Flag
+atr_flag = 1;
+
+Singe Round
+Elapsed time is 5076.033199 seconds.
+Singe Round
+Elapsed time is 4116.788490 seconds.
+Singe Round
+Elapsed time is 4584.139034 seconds.
+Singe Round
+Elapsed time is 4574.318227 seconds.
+Singe Round
+Elapsed time is 4634.835950 seconds.
+Singe Round
+Elapsed time is 4332.217860 seconds.
+Singe Round
+Elapsed time is 4236.829543 seconds.
+Singe Round
+Elapsed time is 3968.018211 seconds.
+Singe Round
+Elapsed time is 5043.402481 seconds.
+Singe Round
+Elapsed time is 3877.979225 seconds.
+Singe Round
+Elapsed time is 3614.011352 seconds.
+Singe Round
+Elapsed time is 4523.744823 seconds.
+Singe Round
+Elapsed time is 4549.177262 seconds.
+Singe Round
+Elapsed time is 5048.071611 seconds.
+Singe Round
+Elapsed time is 4344.048926 seconds.
+Singe Round
+Elapsed time is 3509.001075 seconds.
+Singe Round
+Elapsed time is 4348.522662 seconds.
+Singe Round
+Elapsed time is 4388.641663 seconds.
+Singe Round
+Elapsed time is 4574.545977 seconds.
+Singe Round
+Elapsed time is 3809.928987 seconds.
+
+correct_rate =
+
+    0.0831
+
+Total Run Time
+Elapsed time is 87154.258776 seconds.
