@@ -6,7 +6,7 @@ To generalize and recognize spatial pattern, a probabilistic parametric model is
 
 According to Gold and Rangarajan, a graduated assignment algorithm is developed to solve the problem efficiently and the code here is an attemp to implment and improve their algorithm mentioned in their paper: https://www.cise.ufl.edu/~anand/pdf/pamigm3.pdf
 
-The improved algorithm allows null matching to propagate which in terms improve the recall of matching result.
+The improved algorithm allows null matching to propagate which in terms improve the precision of matching result while maintain the recall.
 
 ### Test Result
 
