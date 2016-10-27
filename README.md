@@ -11,7 +11,7 @@ The improved algorithm allows null matching to propagate which in terms improve 
 ### Test Result
 
 ```
-no prop:
+No Null Propagation:
 
 Final Recall: 0.93824
 Final Precision: 0.81815
@@ -22,6 +22,8 @@ Elapsed time is 192.448153 seconds.
 ```
 
 ```
+Null Propagation:
+
 Final Recall: 0.94936
 Final Precision: 0.88015
 Size: 30
