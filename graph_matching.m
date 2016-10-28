@@ -34,7 +34,7 @@
     beta = beta_0;
     
     % nil node compatibility percentage
-    prct = 10;
+    prct = 15;
     
     % pre-calculate the node compatability
     C_n=zeros(A+1,I+1);
