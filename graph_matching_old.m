@@ -1,4 +1,4 @@
- function [ match_matrix ] = graph_matching( ARG1, ARG2, alpha, stochastic )
+ function [ match_matrix ] = graph_matching_old( ARG1,ARG2, alpha, stochastic )
 %   GRADUATED_ASSIGN_ALGORITHM is a function that compute the best match
 %   matrix with two ARGs
 
@@ -41,9 +41,6 @@
     % initial beta to beta_0
     beta = beta_0;
     
-    % nil node compatibility percentage
-    prct = 10;
-    
     % pre-calculate the node compatability
     C_n=zeros(A+1,I+1);
     
@@ -52,8 +49,8 @@
     node_compat_handle=@(atr1,atr2)compatiblity(atr1,atr2);
     C_n(1:A,1:I)=bsxfun(node_compat_handle,ARG1.nodes_vector',ARG2.nodes_vector);
     % calculate nil compatibility
-    C_n(A+1, 1:I)=prctile(C_n(1:A,1:I),prct,1);
-    C_n(1:A, I+1)=prctile(C_n(1:A,1:I),prct,2);
+    C_n(A+1, 1:I)=0;
+    C_n(1:A, I+1)=0;
     C_n(A+1, I+1)=0;
     % times the alpha weight
     C_n=alpha*C_n;
@@ -79,12 +76,12 @@
     % nil<->a
     C_e(isnan(C_e)) = 0;
     % nil<->nil
-    C_e(isinf(C_e)) = prctile(reshape(C_e(C_e~=0),1,[]),prct);
+    C_e(isinf(C_e)) = 0;
     
     % set up the matrix
     m_Head = rand(augment_size);
     m_Head(A+1, I+1)=0;
-        
+    
     if sFlag
         figure()
     end
@@ -103,7 +100,6 @@
             old_B=m_Head;   % get the old matrix
             I_B = I_B+1;    % increment the iteration counting
             
-            
             % Build the partial derivative matrix Q
             Q=zeros(A+1,I+1);
             for a = 1:A+1
@@ -116,8 +112,7 @@
             Q=Q+C_n;
             
             % Now update m_Head!
-            m_Head=exp(beta*Q);
-            m_Head(A+1, I+1)=0;
+            m_Head(1:A,1:I)=exp(beta*Q(1:A,1:I));
 
             % Setup converge in C step
             converge_C = 0; % a flag for terminating process B
@@ -179,4 +174,5 @@
     end
 
 end
+
 
