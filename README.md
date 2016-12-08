@@ -6,28 +6,41 @@ To generalize and recognize spatial pattern, a probabilistic parametric model is
 
 According to Gold and Rangarajan, a graduated assignment algorithm is developed to solve the problem efficiently and the code here is an attemp to implment and improve their algorithm mentioned in their paper: https://www.cise.ufl.edu/~anand/pdf/pamigm3.pdf
 
-The improved algorithm allows null matching to propagate which in terms improve the precision of matching result while maintain the recall.
+The improved algorithm allows null matching to propagate which in terms improve the precision of matching result while maintain the recall and the additional noise prevent matching to local optimal.
 
 ### Test Result
 
 ```
-No Null Propagation:
+No Null Propagation (old algo):
 
-Final Recall: 0.93824
-Final Precision: 0.81815
-Size: 30
+Recall: 0.75
+Precision: 0.72
+F: 0.73
+Size: 40
 Connected Rate: 0.2
-Noise Rate: 0.2
-Elapsed time is 192.448153 seconds.
+Noise Rate: 0.1
 ```
 
 ```
-Null Propagation:
+Null Propagation + Stochastic (new algo):
 
-Final Recall: 0.94936
-Final Precision: 0.88015
-Size: 30
+Recall: 0.98
+Precision: 0.92
+F: 0.95
+Size: 40
 Connected Rate: 0.2
-Noise Rate: 0.2
-Elapsed time is 300.107886 seconds.
+Noise Rate: 0.1
 ```
+
+```
+Comparison
+
+round: 100
+p_recall: <10^-6
+p_precision: <10^-6
+p_F: <10^-6
+```
+
+![Result]
+(https://github.com/WesleyyC/Graph-Matching/blob/master/Dev/Result/result.jpg)
+
