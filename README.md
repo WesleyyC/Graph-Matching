@@ -11,7 +11,7 @@ The improved algorithm allows null matching to propagate which in terms improve 
 ### Test Result
 
 ```
-No Null Propagation (old algo):
+No Null Propagation (old algo - red):
 
 Recall: 0.75
 Precision: 0.72
@@ -22,7 +22,7 @@ Noise Rate: 0.1
 ```
 
 ```
-Null Propagation + Stochastic (new algo):
+Null Propagation + Stochastic (new algo - blue):
 
 Recall: 0.98
 Precision: 0.92
