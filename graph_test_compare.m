@@ -64,9 +64,9 @@ subplot(2,3,1);
 histogram(precision,0:0.02:1)
 hold on
 histogram(precision_old,0:0.02:1)
-title('Precision Histogram Comparison','FontSize', 20)
-xlabel('Precision','FontSize', 20) % x-axis label
-ylabel('Percentage','FontSize', 20) % y-axis label
+title('Precision Histogram Comparison')
+xlabel('Precision') % x-axis label
+ylabel('Percentage') % y-axis label
 legend('new algo','old algo','Location','northwest')
 
 subplot(2,3,2);
