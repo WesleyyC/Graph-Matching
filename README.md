@@ -42,5 +42,5 @@ p_F: <10^-6
 ```
 
 ![Result]
-(https://github.com/WesleyyC/Graph-Matching/blob/master/Dev/Result/result.jpg)
+(https://github.com/WesleyyC/Graph-Matching/blob/master/Result/result.jpg)
 
