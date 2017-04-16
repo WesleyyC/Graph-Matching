@@ -41,6 +41,5 @@ p_precision: <10^-6
 p_F: <10^-6
 ```
 
-![Result]
-(https://github.com/WesleyyC/Graph-Matching/blob/master/Result/result.jpg)
+![Result](https://github.com/WesleyyC/Graph-Matching/blob/master/Result/result.jpg)
 
